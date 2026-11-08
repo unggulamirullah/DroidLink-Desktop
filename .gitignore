@@ -1,0 +1,21 @@
+﻿# Node.js
+node_modules/
+
+# Frontend build
+dist/
+
+# Rust build
+src-tauri/target/
+src-tauri/gen/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db

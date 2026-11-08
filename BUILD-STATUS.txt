@@ -1,0 +1,26 @@
+DroidLink Desktop v0.1.0 — Build and verification record
+
+Workspace: Linux x86_64
+Node.js: v22.16.0
+npm: 10.9.2
+Rust/Cargo: NOT INSTALLED
+Windows MSVC toolchain: NOT AVAILABLE
+Network dependency install: BLOCKED (DNS/network access unavailable)
+Android device attached: NO
+
+Checks performed:
+- node scripts/verify.mjs: PASS (17/17 structural checks)
+- JavaScript syntax checks (src/main.js, vite.config.js, scripts/verify.mjs): PASS
+- package.json / Tauri JSON / capability JSON parsing: PASS (via structural verifier)
+- npm run build: NOT RUN TO COMPLETION; failed because Vite dependency is not installed (vite: not found)
+- cargo test: NOT RUN; failed because cargo is not installed
+- Windows NSIS installer: NOT BUILT
+- USB / wireless / scrcpy / Redmi Note 13 Pro 5G hardware tests: NOT RUN
+
+This is a source snapshot with an initial implementation, not a tested release binary.
+Before packaging on Windows:
+1. Install Node.js, Rust MSVC toolchain, Visual Studio C++ Build Tools, and WebView2.
+2. Run npm install.
+3. Add the complete official Android Platform Tools files under src-tauri/resources/platform-tools/.
+4. Add the complete official scrcpy Windows release files under src-tauri/resources/scrcpy/.
+5. Run npm run verify, npm run tauri dev, cargo test, then npm run tauri build.
